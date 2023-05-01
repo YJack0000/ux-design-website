@@ -6,9 +6,8 @@
             </h2>
         </div>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            <ProjectCard title="Contextual Inquiry" />
+            <ProjectCard title="Affinity Diagram" />
         </div>
     </div>
 </template>
