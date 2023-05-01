@@ -2,13 +2,13 @@
     <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center">
-                <img
+                <!-- <img
                     src="https://flowbite.com/docs/images/logo.svg"
                     class="h-8 mr-3"
                     alt="Flowbite Logo"
-                />
+                /> -->
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-                    >2023 UX Group 13</span
+                    >2023 <span class="text-blue-500">UX</span> Group 13</span
                 >
             </a>
             <button
