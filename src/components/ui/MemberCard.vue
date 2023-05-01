@@ -5,7 +5,7 @@
         <div>
             <img
                 class="max-w-[200px] rounded-lg sm:rounded-none sm:rounded-l-lg"
-                :src="image"
+                :src="imageUrl"
                 alt="morgan Avatar"
             />
         </div>
@@ -21,5 +21,13 @@
     </div>
 </template>
 <script setup>
-defineProps(['image', 'name', 'department', 'description'])
+import { computed } from 'vue'
+const props = defineProps(['image', 'name', 'department', 'description'])
+
+const imageUrl = computed(() => {
+    if(import.meta.env.PROD)
+        return `/ux-design-website${props.image}`
+    else 
+        return props.image
+})
 </script>
