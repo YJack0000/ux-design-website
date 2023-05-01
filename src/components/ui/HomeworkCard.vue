@@ -12,11 +12,11 @@
                 </h5>
             </a>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-                chronological order.
+                Here is the description of the Homeworks.
             </p>
-            <a
-                href="#"
+            <button
+                data-modal-target="modal"
+                data-modal-toggle="modal"
                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-500 dark:focus:ring-blue-600"
             >
                 Read more
@@ -33,15 +33,27 @@
                         clip-rule="evenodd"
                     ></path>
                 </svg>
-            </a>
+            </button>
+            <HomeworkModal :title="title">
+                <div>Details</div>
+            </HomeworkModal>
         </div>
     </div>
 </template>
 <script setup>
+import HomeworkModal from '@/components/ui/HomeworkModal.vue';
+
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+onMounted(() => {
+    initFlowbite()
+})
+
 defineProps({
     title: {
         type: String,
-        default: 'Project Title',
-    },
+        default: 'Project Title'
+    }
 })
 </script>

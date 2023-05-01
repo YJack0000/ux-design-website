@@ -3,10 +3,10 @@
         <AppNavbar />
     </header>
 
-    <HeroSection />
+    <HeroSection id="hero" />
     <DefaultLayout>
-        <MembersSection />
-        <ProjectsSection />
+        <MembersSection id="members" />
+        <HomeworksSection id="homeworks" />
     </DefaultLayout>
     <AppFooter />
 </template>
@@ -15,7 +15,7 @@ import AppNavbar from '@/components/AppNavbar.vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import MembersSection from '@/components/MembersSection.vue'
-import ProjectsSection from '@/components/ProjectsSection.vue'
+import HomeworksSection from '@/components/HomeworksSection.vue'
 import AppFooter from '@/components/AppFooter.vue'
 </script>
 <style scoped></style>

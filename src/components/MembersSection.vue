@@ -13,91 +13,63 @@
                 </p>
             </div>
             <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-                <div
-                    class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-                >
-                    <div>
-                        <img
-                            class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                            src="/morgan.png"
-                            alt="morgan Avatar"
-                        />
-                    </div>
-                    <div class="p-5 w-[35vw]">
-                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            <div>Ting-Yi, Lin</div>
-                        </h3>
-                        <span class="text-gray-500 dark:text-gray-400"
-                            >Department of Advertising</span
-                        >
-                        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                            Ting-Yi is a designer in Advertising and a freelancer.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-                >
-                    <div>
-                        <img
-                            class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                            src="/tymek.png"
-                            alt="tymek Avatar"
-                        />
-                    </div>
-                    <div class="p-5 w-[35vw]">
-                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            <div>Tymek Jagielski</div>
-                        </h3>
-                        <span class="text-gray-500 dark:text-gray-400"
-                            >Exchange Student from Poland</span
-                        >
-                        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                            Tymek is a student from poland and major in diplomacy.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-                >
-                    <div>
-                        <img
-                            class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                            src="/ashlee.png"
-                            alt="Ashlee Avatar"
-                        />
-                    </div>
-                    <div class="p-5 w-[35vw]">
-                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            <div>Yun-Hsin, Tsai</div>
-                        </h3>
-                        <span class="text-gray-500 dark:text-gray-400"> Department of BA </span>
-                        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                            Yun-Hsin is a good student.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-                >
-                    <div>
-                        <img
-                            class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                            src="/yu-jie.jpg"
-                            alt="yjack Avatar"
-                        />
-                    </div>
-                    <div class="p-5 w-[35vw]">
-                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            <div>Yu-Jie, Zheng</div>
-                        </h3>
-                        <span class="text-gray-500 dark:text-gray-400"> Department of CS </span>
-                        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                            Yu-Jie is a frontend developer and activate in Vue.js community.
-                        </p>
-                    </div>
-                </div>
+                <MemberCard
+                    class="mc hidden-1"
+                    image="/morgan.png"
+                    name="Ting-Yi, Lin"
+                    department="Department of Advertising"
+                    description="Ting-Yi is a designer in Advertising and a freelancer."
+                />
+                <MemberCard
+                    class="mc hidden-1"
+                    image="/tymek.png"
+                    name="Tymek Jagielski"
+                    department="Exchange Student from Poland"
+                    description="Tymek is a student from poland and major in diplomacy."
+                />
+                <MemberCard
+                    class="mc hidden-1"
+                    image="/ashlee.png"
+                    name="Yun-Hsin, Tsai"
+                    department="Department of BA"
+                    description="Yun-Hsin is a good student."
+                />
+                <MemberCard
+                    class="mc hidden-1"
+                    image="/yu-jie.jpg"
+                    name="Yu-Jie, Zheng"
+                    department="Department of CS"
+                    description="Yu-Jie is a frontend developer and active in Vue.js community."
+                />
             </div>
         </div>
     </section>
 </template>
+<script setup>
+import { onMounted } from 'vue'
+import MemberCard from '@/components/ui/MemberCard.vue'
+
+onMounted(() => {
+    let count = 0
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            setTimeout(() => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show-1')
+                } else {
+                    entry.target.classList.remove('show-1')
+                }
+            }, count * 400)
+
+            if (entry.isIntersecting) count += 1
+            if (count > 3) count = 0
+        })
+    })
+
+    const elements = document.querySelectorAll('.mc.hidden-1')
+
+    elements.forEach((element) => {
+        observer.observe(element)
+    })
+})
+</script>
