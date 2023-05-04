@@ -44,7 +44,7 @@
             <div
                 class="hidden opacity-0 transition-all duration-[2s] lg:mt-0 lg:col-span-5 lg:flex overflow-visible"
             >
-                <img class="h-fit my-auto scale-[1.3]" src="/mock.webp" alt="mockup" />
+                <img class="h-fit my-auto scale-[1.3]" src="/mock.svg" alt="mockup" />
             </div>
         </div>
     </section>
