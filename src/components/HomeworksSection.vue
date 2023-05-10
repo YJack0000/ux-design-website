@@ -22,4 +22,5 @@
 import HomeworkCard from '@/components/homeworks/HomeworkCard.vue'
 import CI from '@/components/homeworks/CI.vue'
 import AD from '@/components/homeworks/AD.vue'
+import UP from '@/components/homeworks/UP.vue'
 </script>
