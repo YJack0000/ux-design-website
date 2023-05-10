@@ -15,8 +15,8 @@
                 Here is the description of the Homeworks.
             </p>
             <button
-                data-modal-target="modal"
-                data-modal-toggle="modal"
+                :data-modal-target="`${title}-modal`"
+                :data-modal-toggle="`${title}-modal`"
                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-500 dark:focus:ring-blue-600"
             >
                 Read more
@@ -35,13 +35,13 @@
                 </svg>
             </button>
             <HomeworkModal :title="title">
-                <div>Details</div>
+                <slot />
             </HomeworkModal>
         </div>
     </div>
 </template>
 <script setup>
-import HomeworkModal from '@/components/ui/HomeworkModal.vue';
+import HomeworkModal from '@/components/homeworks/HomeworkModal.vue'
 
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'

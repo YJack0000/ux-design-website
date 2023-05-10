@@ -6,11 +6,20 @@
             </h2>
         </div>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <HomeworkCard title="Contextual Inquiry" />
-            <HomeworkCard title="Affinity Diagram" />
+            <HomeworkCard title="Contextual Inquiry">
+                <CI />
+            </HomeworkCard>
+            <HomeworkCard title="Affinity Diagram">
+                <AD />
+            </HomeworkCard>
+            <HomeworkCard title="User Persona">
+                <UP />
+            </HomeworkCard>
         </div>
     </div>
 </template>
 <script setup>
-import HomeworkCard from '@/components/ui/HomeworkCard.vue'
+import HomeworkCard from '@/components/homeworks/HomeworkCard.vue'
+import CI from '@/components/homeworks/CI.vue'
+import AD from '@/components/homeworks/AD.vue'
 </script>
