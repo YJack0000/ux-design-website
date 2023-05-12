@@ -70,7 +70,7 @@ defineProps({
 })
 </script>
 <style scoped>
-section > * {
+:deep(section > *) {
     margin-bottom: 1rem;
 }
 
