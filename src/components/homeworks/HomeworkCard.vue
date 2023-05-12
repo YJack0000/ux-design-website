@@ -105,7 +105,7 @@ section > * {
 }
 :deep(iframe) {
     width: 100%;
-    height: 100%;
+    height: 80vh;
 }
 :deep(img:hover) {
     transform: scale(1.3);
