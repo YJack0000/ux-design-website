@@ -24,10 +24,8 @@
         <div class="w-full h-[800px]">
             <iframe
                 src="https://drive.google.com/file/d/1cXOG6z16orlh-JaxC8j22te3gyqZOaUS/preview?usp=drivesdk"
-                class="iframe-full"
+                class="w-full h-full"
                 title="My item"
-                width="939"
-                style="visibility: visible; width: 939px"
             ></iframe>
         </div>
         <h2>Graphic Models</h2>
@@ -59,35 +57,3 @@
         </ul>
     </section>
 </template>
-<style scoped>
-section > * {
-    margin-bottom: 1rem;
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-ul {
-    list-style-type: disc;
-}
-li {
-    margin-left: 2rem;
-}
-</style>
