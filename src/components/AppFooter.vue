@@ -7,7 +7,7 @@
                     >© 2023 <a href="https://flowbite.com" class="hover:underline">NCCU UX Class Group13™</a>.
                     All Rights Reserved.
                 </span>
-                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                <!-- <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                     <a href="https://github.com/YJack0000/ux-design-website" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                         <svg
                             class="w-5 h-5"
@@ -22,7 +22,7 @@
                             />
                         </svg>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>
