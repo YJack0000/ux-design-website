@@ -81,6 +81,7 @@
 </template>
 <script setup>
 const scrollToViewId = (id) => {
+    console.log('scrollToViewId', id)
     const el = document.getElementById(id)
     if (el) {
         el.scrollIntoView({ behavior: 'smooth' })
