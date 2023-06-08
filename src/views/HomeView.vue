@@ -7,6 +7,7 @@
     <DefaultLayout>
         <MembersSection id="members" />
         <HomeworksSection id="homeworks" />
+        <FinalProjectSection id="final-project" />
     </DefaultLayout>
     <AppFooter />
 </template>
@@ -16,6 +17,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import MembersSection from '@/components/MembersSection.vue'
 import HomeworksSection from '@/components/HomeworksSection.vue'
+import FinalProjectSection from '../components/FinalProjectSection.vue'
 import AppFooter from '@/components/AppFooter.vue'
 </script>
 <style scoped></style>
