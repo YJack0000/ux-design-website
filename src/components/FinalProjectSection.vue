@@ -33,11 +33,21 @@
                     margin: 0;
                 "
                 src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFk10aKOMA&#x2F;view?embed"
-                allowfullscreen="allowfullscreen"
+                allowfullscreen
                 allow="fullscreen"
             >
             </iframe>
         </div>
+        <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-12">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                User Flow
+            </h2>
+        </div>
+        <iframe
+            class="mb-8 w-full h-[700px]"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FC6icEX9Oo0vYJ1KLU6cJBn%2F%25E5%2585%2586%25E8%25B1%2590User-flow%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3DEJD8WHgIkzPXvUok-1"
+            allowfullscreen
+        ></iframe>
         <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-12">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                 Hi-Fi Prototype
